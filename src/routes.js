@@ -2,12 +2,16 @@ import React from 'react'
 import {Route, Switch} from 'react-router-dom'
 import Home from './components/Home'
 
+import Layout from './hoc/Layout/layout'
+
 class Routes extends React.Component {
   render () {
     return (
-      <Switch>
-        <Route path='/' component={Home}/>
-      </Switch>
+      <Layout>
+        <Switch>
+          <Route path='/' component={Home}/>
+        </Switch>
+      </Layout>
     )
   }
 }
